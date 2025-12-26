@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<category>
+	    <pattern>
+	        DO YOUR THING
+	    </pattern>
+	    <template>
+	        <think><set var="num">12</set></think>
+	        XADD <get var="num"/> 34
+	    </template>
+	</category>
+</aiml>
