@@ -11,4 +11,38 @@
 	    </template>
 	</category>
 
+    <category>
+	    <pattern>
+	        MAX 0 <set>number</set>
+	    </pattern>
+	    <template>
+	        <think> <set var = "score"> <star /> </set> </think>
+	        <condition var="score">
+	            <li value = "0"> BOTH </li>
+	            <li> RIGHT </li>
+	        </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        MAX <set>number</set> 0
+	    </pattern>
+	    <template>
+	        <think> <set var = "score"> <star /> </set> </think>
+	        <condition var="score">
+	            <li value = "0"> BOTH </li>
+	            <li> LEFT </li>
+	        </condition>
+	    </template>
+	</category>
+	
+    <category>
+	    <pattern>
+	        MAX <set>number</set> <set>number</set>
+	    </pattern>
+	    <template>
+	        <srai> MAX  <map name="predecessor"><star index="1" /></map> <map name="predecessor"><star index="2" /></map> </srai>
+	    </template>
+	</category>
 </aiml>
