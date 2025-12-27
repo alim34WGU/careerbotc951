@@ -13,7 +13,7 @@
 
     <category>
 	    <pattern>
-	        MAX 0 <set>number</set>
+	        ZMAX 0 ZS <set>number</set>
 	    </pattern>
 	    <template>
 	        <think> <set var = "score"> <star /> </set> </think>
@@ -26,7 +26,7 @@
 	
 	<category>
 	    <pattern>
-	        MAX <set>number</set> 0
+	        ZMAX <set>number</set> ZS 0
 	    </pattern>
 	    <template>
 	        <think> <set var = "score"> <star /> </set> </think>
@@ -39,10 +39,24 @@
 	
     <category>
 	    <pattern>
-	        MAX <set>number</set> <set>number</set>
+	        ZMAX <set>number</set> ZS <set>number</set>
 	    </pattern>
 	    <template>
-	        <srai> MAX  <map name="predecessor"><star index="1" /></map> <map name="predecessor"><star index="2" /></map> </srai>
+	        <srai> ZMAX  <map name="predecessor"><star index="1" /></map> ZS <map name="predecessor"><star index="2" /></map> </srai>
 	    </template>
 	</category>
+	
+	<category>
+	    <pattern>
+	        FMAX <set>number</set> FS <set>number</set>
+	    </pattern>
+	    <template>
+	        <think><set name = "maxvalue"><srai> ZMAX  <star index="1" /> ZS <star index="2" /> </srai></set></think>
+	         <condition name="maxvalue">
+	            <li value = "LEFT"> <star index="1" /> </li>
+	            <li> <star index="2" /> </li>
+	        </condition>
+	    </template>
+	</category>
+	
 </aiml>
