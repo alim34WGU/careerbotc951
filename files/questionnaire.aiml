@@ -10,4 +10,5 @@
 	        XADD <get var="num"/> 34
 	    </template>
 	</category>
+
 </aiml>
