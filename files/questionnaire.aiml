@@ -7,7 +7,7 @@
 	    </pattern>
 	    <template>
 	        <think><set var="num">12</set></think>
-	        XADD <get var="num"/> 34
+	        <srai> XADD <get var="num"/> XS 34 </srai>
 	    </template>
 	</category>
 
