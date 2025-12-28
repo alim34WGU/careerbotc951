@@ -74,5 +74,50 @@
 	    </template>
 	</category>
 	
+	<category>
+	    <pattern>
+	        ^ CAREER ^
+	    </pattern>
+	    <template>
+	        <think>
+	            <set name = "questionnum"> 1 </set>
+	            <set name = "topic"> data1 </set>
+	        </think>
+	        Great! I will ask you a series of questions to find your strengths, preferences, and the best career option.
+	        <srai> ZDATA1 </srai>
+	    </template>
+	</category>
+	
+	<topic name = "data1">
+    <category>
+	    <pattern>
+	        ZDATA1
+	    </pattern>
+	    <template>
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', please indicate how much you agree or disagree with the following statement.
+	        I love to apply numbers, metrics, mathematical or statistical concepts to my current tasks.
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        <set>number</set>
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1"> </li>
+	            <li value = "2"> </li>
+	            <li value = "3"> </li>
+	            <li value = "4"> </li>
+	            <li value = "5"> </li>
+	            <li> Please enter a number between 1`and 5 inclusive. <srai>ZDATA1</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	
+	</topic>
 	
 </aiml>
