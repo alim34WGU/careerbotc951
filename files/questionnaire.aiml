@@ -59,4 +59,20 @@
 	    </template>
 	</category>
 	
+	<category>
+	    <pattern>
+	        LMAX <set>number</set> LS <set>number</set> <set>number</set> <set>number</set> <set>number</set>
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "maxnum"><srai> FMAX <star index="1" /> FS <star index="2" /> </srai></set>
+	            <set var = "maxnum"><srai> FMAX <get var = "maxnum"/> FS <star index="3" /> </srai></set>
+	            <set var = "maxnum"><srai> FMAX <get var = "maxnum"/> FS <star index="4" /> </srai></set>
+	            <set var = "maxnum"><srai> FMAX <get var = "maxnum"/> FS <star index="5" /> </srai></set>
+	        </think>
+	        <get var = "maxnum"/>
+	    </template>
+	</category>
+	
+	
 </aiml>
