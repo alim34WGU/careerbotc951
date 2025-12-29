@@ -2,6 +2,7 @@
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
 	
+	<!-- Helper Function to Determine Which of the Two Nonnegative Integers is Greater-->
     <category>
 	    <pattern>
 	        ZMAX 0 ZS <set>number</set>
@@ -15,6 +16,7 @@
 	    </template>
 	</category>
 	
+	<!-- Helper Function to Determine Which of the Two Nonnegative Integers is Greater-->
 	<category>
 	    <pattern>
 	        ZMAX <set>number</set> ZS 0
@@ -28,6 +30,7 @@
 	    </template>
 	</category>
 	
+	<!-- Determines the Greater of Two Nonnegative Integers -->
     <category>
 	    <pattern>
 	        ZMAX <set>number</set> ZS <set>number</set>
@@ -37,6 +40,7 @@
 	    </template>
 	</category>
 	
+	<!-- Determines the Max of Two Nonnegative Integers -->
 	<category>
 	    <pattern>
 	        FMAX <set>number</set> FS <set>number</set>
@@ -50,6 +54,7 @@
 	    </template>
 	</category>
 	
+	<!-- Determines the Max of Five Nonnegative Integers -->
 	<category>
 	    <pattern>
 	        LMAX <set>number</set> LS <set>number</set> <set>number</set> <set>number</set> <set>number</set>
@@ -65,6 +70,13 @@
 	    </template>
 	</category>
 	
+	<!-- Start of the Career Questionnaire
+	     Creating Predicates to Store Skills and Preferences and to Determine the Best Career Option(s)
+	     Three Questions for Five Career Areas: Software Development, Management, Consulting, Cybersecurity, 
+	     Data Analysis
+	     One of the Three Question in Each Career Area has an Associated Preference
+	     One of the Three Question in Each Career Area has an Associated Strength
+	-->
 	<category>
 	    <pattern>
 	        ^ CAREER ^
@@ -96,6 +108,7 @@
 	    </template>
 	</category>
 	
+	<!-- Question 1 for Data Analysis -->
 	<topic name = "data1">
     <category>
 	    <pattern>
@@ -108,6 +121,7 @@
 	    </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -161,6 +175,7 @@
 	
 	</topic>
 	
+	<!-- Question 2 for Data Analysis -->
 	<topic name = "data2">
 	    <category>
 	    <pattern>
@@ -173,6 +188,7 @@
 	    </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -225,6 +241,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 3 for Data Analysis -->
 	<topic name = "data3">
 	    <category>
 	    <pattern>
@@ -237,6 +254,7 @@
 	    </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -289,6 +307,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 1 for Management -->
 	<topic name = "data4">
 	    <category>
 	    <pattern>
@@ -301,6 +320,7 @@
 	    </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -353,6 +373,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 2 for Management -->
 	<topic name = "data5">
 	    <category>
 	    <pattern>
@@ -365,6 +386,7 @@
 	    </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -415,6 +437,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 3 for Management -->
 	<topic name = "data6">
     <category>
         <pattern>
@@ -427,6 +450,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -479,6 +503,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 1 for Consulting -->
 	<topic name = "data7">
     <category>
         <pattern>
@@ -491,6 +516,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -543,6 +569,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 2 for Consulting -->
 	<topic name = "data8">
     <category>
         <pattern>
@@ -555,6 +582,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -605,6 +633,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 3 for Consulting -->
 	<topic name = "data9">
     <category>
         <pattern>
@@ -617,6 +646,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -669,6 +699,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 1 for Software Development -->
 	<topic name = "data10">
     <category>
         <pattern>
@@ -681,6 +712,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -733,6 +765,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 2 for Software Development -->
 	<topic name = "data11">
     <category>
         <pattern>
@@ -745,6 +778,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -797,6 +831,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 3 for Software Development -->
 	<topic name = "data12">
     <category>
         <pattern>
@@ -809,6 +844,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -859,6 +895,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 1 for Security -->
 	<topic name = "data13">
     <category>
         <pattern>
@@ -871,6 +908,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -923,6 +961,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 2 for Security -->
 	<topic name = "data14">
     <category>
         <pattern>
@@ -935,6 +974,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -987,6 +1027,7 @@
 	</category>
 	</topic>
 	
+	<!-- Question 3 for Security -->
 	<topic name = "data15">
     <category>
         <pattern>
@@ -999,6 +1040,7 @@
         </template>
 	</category>
 	
+	<!-- Stores Specific Skill/Preference and Answer for Question -->
 	<category>
 	    <pattern>
 	        *
@@ -1049,6 +1091,10 @@
 	</category>
 	</topic>
 	
+	<!-- Creates a Report for the Student of His/Her Preferences and Strengths and Career Options 
+	     If the student does not answer positively with most of the questions, then it is likely that
+	     he or she may not have any preference, strength, or career option as determined by the questionnaire.
+	-->
 	<topic name = "createreport">
 	<category>
 	    <pattern>
@@ -1208,6 +1254,7 @@
 	</category>
 	</topic>
 	
+	<!-- Generates the Career Options of the Student -->
 	<category>
 	    <pattern>ZMAXREPORT <set>number</set></pattern>
 	    
