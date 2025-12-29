@@ -8,6 +8,7 @@
 	    <template>
 	        <think><set var="num">17</set></think>
 	        <srai> XADD <get var="num" /> XS 34 </srai>
+	        <think><srai>ZMAXREPORT 0</srai></think>
 	    </template>
 	</category>
 
@@ -127,30 +128,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data2 </set>
+	                <think>
+	                    <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                    <set name = "topic"> data2 </set>
+	                </think>
 	                <srai>ZDATA2</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data2 </set>
+	                <think>
+	                    <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                    <set name = "topic"> data2 </set>
+	                </think>
 	                <srai>ZDATA2</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data2 </set>
+	                <think>
+	                    <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                    <set name = "topic"> data2 </set>
+	                </think>
 	                <srai>ZDATA2</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "numericpref"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data2 </set>
+	                <think>
+	                    <set name = "numericpref"> 1 </set>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data2 </set>
+	                </think>
 	                <srai>ZDATA2</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "numericpref"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data2 </set>
+	                <think>
+	                    <set name = "numericpref"> 1 </set>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data2 </set>
+	                </think>
 	                <srai>ZDATA2</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive. <br/> <srai>ZDATA1</srai></li>
@@ -182,30 +193,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data3 </set>
+	                <think>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data3 </set>
+	                </think>
 	                <srai>ZDATA3</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data3 </set>
+	                <think>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data3 </set>
+	                </think>
 	                <srai>ZDATA3</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data3 </set>
+	                <think>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data3 </set>
+	                </think>>
 	                <srai>ZDATA3</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "numericpref"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data3 </set>
+	                <think>
+    	                <set name = "numericpref"> 1 </set>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data3 </set>
+	                </think>
 	                <srai>ZDATA3</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "numericpref"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data3 </set>
+	                <think>
+    	                <set name = "numericpref"> 1 </set>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data3 </set>
+	                </think>
 	                <srai>ZDATA3</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA2</srai></li>
@@ -236,30 +257,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data4 </set>
+	                <think>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data4 </set>
+	                </think>
 	                <srai>ZDATA4</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data4 </set>
+	                <think>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data4 </set>
+	                </think>
 	                <srai>ZDATA4</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data4 </set>
+	               <think>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data4 </set>
+	                </think>
 	                <srai>ZDATA4</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "numericskill"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data4 </set>
+	                <think>
+    	                <set name = "numericskill"> 1 </set>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data4 </set>
+	                </think>
 	                <srai>ZDATA4</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "numericskill"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data4 </set>
+	                <think>
+    	                <set name = "numericskill"> 1 </set>
+    	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data4 </set>
+	                </think>
 	                <srai>ZDATA4</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA3</srai></li>
@@ -290,30 +321,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data5 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data5 </set>
+	                </think>
 	                <srai>ZDATA5</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data5 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data5 </set>
+	                </think>
 	                <srai>ZDATA5</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data5 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data5 </set>
+	                </think>
 	                <srai>ZDATA5</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "communicationpref"> 1 </set>
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data5 </set>
+	                <think>
+    	                <set name = "communicationpref"> 1 </set>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data5 </set>
+	                </think>
 	                <srai>ZDATA5</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "communicationpref"> 1 </set>
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data5 </set>
+	                <think>
+    	                <set name = "communicationpref"> 1 </set>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data5 </set>
+	                </think>
 	                <srai>ZDATA5</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA4</srai></li>
@@ -344,28 +385,38 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data6 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data6 </set>
+	                </think>
 	                <srai>ZDATA6</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data6 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data6 </set>
+	                </think>
 	                <srai>ZDATA6</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data6 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data6 </set>
+	                </think>
 	                <srai>ZDATA6</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data6 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data6 </set>
+	                </think>
 	                <srai>ZDATA6</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data6 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data6 </set>
+	                </think>
 	                <srai>ZDATA6</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA5</srai></li>
@@ -396,30 +447,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data7 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data7 </set>
+	                </think>
 	                <srai>ZDATA7</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data7 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data7 </set>
+	                </think>
 	                <srai>ZDATA7</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data7 </set>
+	                <think>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data7 </set>
+	                </think>
 	                <srai>ZDATA7</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "leadershipskill"> 1 </set>
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data7 </set>
+	                <think>
+    	                <set name = "leadershipskill"> 1 </set>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data7 </set>
+	                </think>
 	                <srai>ZDATA7</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "leadershipskill"> 1 </set>
-	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data7 </set>
+	                <think>
+    	                <set name = "leadershipskill"> 1 </set>
+    	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data7 </set>
+	                </think>
 	                <srai>ZDATA7</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA6</srai></li>
@@ -450,30 +511,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data8 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data8 </set>
+	                </think>
 	                <srai>ZDATA8</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data8 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data8 </set>
+	                </think>
 	                <srai>ZDATA8</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data8 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data8 </set>
+	                </think>
 	                <srai>ZDATA8</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "workplacepref"> 1 </set>
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data8 </set>
+	                <think>
+    	                <set name = "workplacepref"> 1 </set>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data8 </set>
+	                </think>
 	                <srai>ZDATA8</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "workplacepref"> 1 </set>
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data8 </set>
+	                <think>
+    	                <set name = "workplacepref"> 1 </set>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data8 </set>
+	                </think>
 	                <srai>ZDATA8</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA7</srai></li>
@@ -504,28 +575,38 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data9 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data9 </set>
+	                </think>
 	                <srai>ZDATA9</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data9 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data9 </set>
+	                </think>
 	                <srai>ZDATA9</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data9 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data9 </set>
+	                </think>
 	                <srai>ZDATA9</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data9 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data9 </set>
+	                </think>
 	                <srai>ZDATA9</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data9 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data9 </set>
+	                </think>
 	                <srai>ZDATA9</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA8</srai></li>
@@ -556,30 +637,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data10 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data10 </set>
+	                </think>
 	                <srai>ZDATA10</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data10 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data10 </set>
+	                </think>
 	                <srai>ZDATA10</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data10 </set>
+	                <think>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data10 </set>
+	                </think>
 	                <srai>ZDATA10</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "problemsolveskill"> 1 </set>
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data10 </set>
+	                <think>
+    	                <set name = "problemsolveskill"> 1 </set>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data10 </set>
+	                </think>
 	                <srai>ZDATA10</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "problemsolveskill"> 1 </set>
-	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data10 </set>
+	                <think>
+    	                <set name = "problemsolveskill"> 1 </set>
+    	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data10 </set>
+	                </think>
 	                <srai>ZDATA10</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA9</srai></li>
@@ -610,30 +701,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data11 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data11 </set>
+	                </think>
 	                <srai>ZDATA11</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data11 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data11 </set>
+	                </think>
 	                <srai>ZDATA11</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data11 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data11 </set>
+	                </think>
 	                <srai>ZDATA11</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "buildskill"> 1 </set>
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data11 </set>
+	                <think>
+    	                <set name = "buildskill"> 1 </set>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data11 </set>
+	                </think>
 	                <srai>ZDATA11</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "buildskill"> 1 </set>
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data11 </set>
+	                <think>
+    	                <set name = "buildskill"> 1 </set>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data11 </set>
+	                </think>
 	                <srai>ZDATA11</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA10</srai></li>
@@ -664,30 +765,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data12 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data12 </set>
+	                </think>
 	                <srai>ZDATA12</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data12 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data12 </set>
+	                </think>
 	                <srai>ZDATA12</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data12 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data12 </set>
+	                </think>
 	                <srai>ZDATA12</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "codingpref"> 1 </set>
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data12 </set>
+	                <think>
+    	                <set name = "codingpref"> 1 </set>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data12 </set>
+	                </think>
 	                <srai>ZDATA12</srai>
 	            </li>
 	            <li value = "5"> 
-	                <set name = "codingpref"> 1 </set>
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data12 </set>
+	                <think>
+    	                <set name = "codingpref"> 1 </set>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data12 </set>
+	                </think>
 	                <srai>ZDATA12</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA11</srai></li>
@@ -718,28 +829,38 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data13 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data13 </set>
+	                </think>
 	                <srai>ZDATA13</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data13 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data13 </set>
+	                </think>
 	                <srai>ZDATA13</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data13 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data13 </set>
+	                </think>
 	                <srai>ZDATA13</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data13 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data13 </set>
+	                </think>
 	                <srai>ZDATA13</srai>
 	            </li>
 	            <li value = "5">
-	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data13 </set>
+	                <think>
+    	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data13 </set>
+	                </think>
 	                <srai>ZDATA13</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA12</srai></li>
@@ -770,30 +891,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data14 </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data14 </set>
+	                </think>
 	                <srai>ZDATA14</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data14 </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data14 </set>
+	                </think>
 	                <srai>ZDATA14</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data14 </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data14 </set>
+	                </think>
 	                <srai>ZDATA14</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "errordetectskill"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data14 </set>
+	                <think>
+	                    <set name = "errordetectskill"> 1 </set>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data14 </set>
+	                </think>
 	                <srai>ZDATA14</srai>
 	            </li>
 	            <li value = "5">
-	                <set name = "errordetectskill"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data14 </set>
+	                <think>
+	                    <set name = "errordetectskill"> 1 </set>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data14 </set>
+	                </think>
 	                <srai>ZDATA14</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA13</srai></li>
@@ -824,30 +955,40 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data15 </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data15 </set>
+	                </think>
 	                <srai>ZDATA15</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data15 </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data15 </set>
+	                </think>
 	                <srai>ZDATA15</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data15 </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data15 </set>
+	                </think>
 	                <srai>ZDATA15</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "securitypref"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data15 </set>
+	                <think>
+	                    <set name = "securitypref"> 1 </set>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data15 </set>
+	                </think>
 	                <srai>ZDATA15</srai>
 	            </li>
 	            <li value = "5">
-	                <set name = "securitypref"> 1 </set>
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> data15 </set>
+	                <think>
+	                    <set name = "securitypref"> 1 </set>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> data15 </set>
+	                </think>
 	                <srai>ZDATA15</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA14</srai></li>
@@ -878,28 +1019,38 @@
 	        </think>
 	        <condition var = "rating">
 	            <li value = "1">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> createreport </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> createreport </set>
+	                </think>
 	                <srai>ZCREATEREPORT</srai>
 	            </li>
 	            <li value = "2"> 
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> createreport </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> createreport </set>
+	                </think>
 	                <srai>ZCREATEREPORT</srai>
 	            </li>
 	            <li value = "3">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> createreport </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> createreport </set>
+	                </think>
 	                <srai>ZCREATEREPORT</srai>
 	            </li>
 	            <li value = "4">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> createreport </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> createreport </set>
+	                </think>
 	                <srai>ZCREATEREPORT</srai>
 	            </li>
 	            <li value = "5">
-	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
-	                <set name = "topic"> createreport </set>
+	                <think>
+    	                <set name = "security"><srai> XADD <get name = "security" /> XS <get var = "rating" /> </srai></set>
+    	                <set name = "topic"> createreport </set>
+	                </think>
 	                <srai>ZCREATEREPORT</srai>
 	            </li>
 	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA15</srai></li>
@@ -924,53 +1075,49 @@
 	           <li></li>
 	       </condition>
 	       
-	       <condition var = "commavar">
-	           <li value = "1"> , </li>
-	           <li></li>
-	       </condition>
-	       
 	       <condition name = "leadershipskill">
-	           <li value = "1"> 
+	           <li value = "1">
+	                <condition var = "commavar">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
 	                <think><set var = "commavar"> 1 </set></think>
 	                leadership
 	           </li>
 	           <li></li>
 	       </condition>
 	       
-	       <condition var = "commavar">
-	           <li value = "1"> , </li>
-	           <li></li>
-	       </condition>
-	       
 	       <condition name = "problemsolveskill">
 	           <li value = "1"> 
+	                <condition var = "commavar">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
 	                <think><set var = "commavar"> 1 </set></think>
 	                solving people's problems
 	           </li>
 	           <li></li>
 	       </condition>
 	       
-	       <condition var = "commavar">
-	           <li value = "1"> , </li>
-	           <li></li>
-	       </condition>
-	       
 	       <condition name = "buildskill">
-	           <li value = "1"> 
+	           <li value = "1">
+	                <condition var = "commavar">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
 	                <think><set var = "commavar"> 1 </set></think>
 	                creating objects
 	           </li>
 	           <li></li>
 	       </condition>
 	       
-	       <condition var = "commavar">
-	           <li value = "1"> , </li>
-	           <li></li>
-	       </condition>
-	       
 	       <condition name = "errordetectskill">
-	           <li value = "1"> 
-	                eliminating errors
+	           <li value = "1">
+	               <condition var = "commavar">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	               </condition> 
+	               eliminating errors
 	           </li>
 	           <li></li>
 	       </condition>
@@ -982,7 +1129,7 @@
 	       
 	       .
 	       
-	       You prefer 
+	       You prefer :
 	       <condition name = "numericpref">
 	           <li value = "1"> 
 	                <think><set var = "commavar"> 1 </set></think>
@@ -991,52 +1138,48 @@
 	           <li></li>
 	       </condition>
 	       
-	       <condition var = "commavar">
-	           <li value = "1"> , </li>
-	           <li></li>
-	       </condition>
-	       
 	       <condition name = "communicationpref">
 	           <li value = "1"> 
+	                <condition var = "commavar">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
 	                <think><set var = "commavar"> 1 </set></think>
 	                interacting with people
 	           </li>
 	           <li></li>
 	       </condition>
 	       
-	       <condition var = "commavar">
-	           <li value = "1"> , </li>
-	           <li></li>
-	       </condition>
-	       
 	       <condition name = "workplacepref">
 	           <li value = "1"> 
+	                <condition var = "commavar">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
 	                <think><set var = "commavar"> 1 </set></think>
 	                varying your workplace
 	           </li>
 	           <li></li>
 	       </condition>
 	       
-	       <condition var = "commavar">
-	           <li value = "1"> , </li>
-	           <li></li>
-	       </condition>
-	       
 	       <condition name = "codingpref">
 	           <li value = "1"> 
+	                <condition var = "commavar">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
 	                <think><set var = "commavar"> 1 </set></think>
 	                writing lines of programming code
 	           </li>
 	           <li></li>
 	       </condition>
 	       
-	       <condition var = "commavar">
-	           <li value = "1"> , </li>
-	           <li></li>
-	       </condition>
-	       
 	       <condition name = "securitypref">
 	           <li value = "1"> 
+	                <condition var = "commavar">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
 	                caring about software security
 	           </li>
 	           <li></li>
