@@ -80,8 +80,25 @@
 	    </pattern>
 	    <template>
 	        <think>
-	            <set name = "questionnum"> 1 </set>
 	            <set name = "topic"> data1 </set>
+	            
+	            <set name = "numericskill"> 0 </set>
+	            <set name = "leadershipskill"> 0 </set>
+	            <set name = "problemsolveskill"> 0 </set>
+	            <set name = "buildskill"> 0 </set>
+	            <set name = "errordetectskill"> 0 </set>
+	            
+	            <set name = "numericpref"> 0 </set>
+	            <set name = "communicationpref"> 0 </set>
+	            <set name = "workplacepref"> 0 </set>
+	            <set name = "codingpref"> 0 </set>
+	            <set name = "securitypref"> 0 </set>
+	            
+	            <set name = "management"> 0 </set>
+	            <set name = "consulting"> 0 </set>
+	            <set name = "development"> 0 </set>
+	            <set name = "security"> 0 </set>
+	            <set name = "analysis"> 0 </set>
 	        </think>
 	        Great! I will ask you a series of questions to find your strengths, preferences, and the best career option. <br/>
 	        <srai> ZDATA1 </srai>
@@ -102,23 +119,1010 @@
 	
 	<category>
 	    <pattern>
-	        <set>number</set>
+	        *
 	    </pattern>
 	    <template>
 	        <think>
 	            <set var = "rating"><star index = "1" /></set>
 	        </think>
 	        <condition var = "rating">
-	            <li value = "1"> </li>
-	            <li value = "2"> </li>
-	            <li value = "3"> </li>
-	            <li value = "4"> </li>
-	            <li value = "5"> </li>
-	            <li> Please enter a number between 1`and 5 inclusive. <srai>ZDATA1</srai></li>
+	            <li value = "1">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data2 </set>
+	                <srai>ZDATA2</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data2 </set>
+	                <srai>ZDATA2</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data2 </set>
+	                <srai>ZDATA2</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "numericpref"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data2 </set>
+	                <srai>ZDATA2</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "numericpref"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data2 </set>
+	                <srai>ZDATA2</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive. <br/> <srai>ZDATA1</srai></li>
 	        </condition>
 	    </template>
 	</category>
 	
 	</topic>
 	
+	<topic name = "data2">
+	    <category>
+	    <pattern>
+	        ZDATA2
+	    </pattern>
+	    <template>
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+	        please indicate how much you agree or disagree with the following statement:<br/>
+	        I prefer to quantify the world in terms of objective measurements and conclusions rather than relying on intuition and experience.
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data3 </set>
+	                <srai>ZDATA3</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data3 </set>
+	                <srai>ZDATA3</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data3 </set>
+	                <srai>ZDATA3</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "numericpref"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data3 </set>
+	                <srai>ZDATA3</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "numericpref"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data3 </set>
+	                <srai>ZDATA3</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA2</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data3">
+	    <category>
+	    <pattern>
+	        ZDATA3
+	    </pattern>
+	    <template>
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+	        please indicate how much you agree or disagree with the following statement:<br/>
+	        I am proficient in numerical analysis and/or math.
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data4 </set>
+	                <srai>ZDATA4</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data4 </set>
+	                <srai>ZDATA4</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data4 </set>
+	                <srai>ZDATA4</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "numericskill"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data4 </set>
+	                <srai>ZDATA4</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "numericskill"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data4 </set>
+	                <srai>ZDATA4</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA3</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data4">
+	    <category>
+	    <pattern>
+	        ZDATA4
+	    </pattern>
+	    <template>
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+	        please indicate how much you agree or disagree with the following statement:<br/>
+	        I prefer to tackle problems by mediating between different people.
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data5 </set>
+	                <srai>ZDATA5</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data5 </set>
+	                <srai>ZDATA5</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data5 </set>
+	                <srai>ZDATA5</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "communicationpref"> 1 </set>
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data5 </set>
+	                <srai>ZDATA5</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "communicationpref"> 1 </set>
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data5 </set>
+	                <srai>ZDATA5</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA4</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data5">
+	    <category>
+	    <pattern>
+	        ZDATA5
+	    </pattern>
+	    <template>
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+	        please indicate how much you agree or disagree with the following statement:<br/>
+	        I find it fulfilling and purposeful to participate in meetings which may last for hours.
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data6 </set>
+	                <srai>ZDATA6</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data6 </set>
+	                <srai>ZDATA6</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data6 </set>
+	                <srai>ZDATA6</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data6 </set>
+	                <srai>ZDATA6</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data6 </set>
+	                <srai>ZDATA6</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA5</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data6">
+    <category>
+        <pattern>
+            ZDATA6
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I excel at leading a group of people.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data7 </set>
+	                <srai>ZDATA7</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data7 </set>
+	                <srai>ZDATA7</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data7 </set>
+	                <srai>ZDATA7</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "leadershipskill"> 1 </set>
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data7 </set>
+	                <srai>ZDATA7</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "leadershipskill"> 1 </set>
+	                <set name = "management"><srai> XADD <get name = "management" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data7 </set>
+	                <srai>ZDATA7</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA6</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data7">
+    <category>
+        <pattern>
+            ZDATA7
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I prefer a work environment which is constantly changing.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data8 </set>
+	                <srai>ZDATA8</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data8 </set>
+	                <srai>ZDATA8</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data8 </set>
+	                <srai>ZDATA8</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "workplacepref"> 1 </set>
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data8 </set>
+	                <srai>ZDATA8</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "workplacepref"> 1 </set>
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data8 </set>
+	                <srai>ZDATA8</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA7</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data8">
+    <category>
+        <pattern>
+            ZDATA8
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I prefer being able to set my own work schedule even if it means having to advertise my own skills and services.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data9 </set>
+	                <srai>ZDATA9</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data9 </set>
+	                <srai>ZDATA9</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data9 </set>
+	                <srai>ZDATA9</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data9 </set>
+	                <srai>ZDATA9</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data9 </set>
+	                <srai>ZDATA9</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA8</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data9">
+    <category>
+        <pattern>
+            ZDATA9
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I have an uncanny ability to resolve issues that other people encounter.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data10 </set>
+	                <srai>ZDATA10</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data10 </set>
+	                <srai>ZDATA10</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data10 </set>
+	                <srai>ZDATA10</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "problemsolveskill"> 1 </set>
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data10 </set>
+	                <srai>ZDATA10</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "problemsolveskill"> 1 </set>
+	                <set name = "consulting"><srai> XADD <get name = "consulting" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data10 </set>
+	                <srai>ZDATA10</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA9</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data10">
+    <category>
+        <pattern>
+            ZDATA10
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I am able to easily build physical products or create software user applications.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data11 </set>
+	                <srai>ZDATA11</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data11 </set>
+	                <srai>ZDATA11</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data11 </set>
+	                <srai>ZDATA11</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "buildskill"> 1 </set>
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data11 </set>
+	                <srai>ZDATA11</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "buildskill"> 1 </set>
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data11 </set>
+	                <srai>ZDATA11</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA10</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data11">
+    <category>
+        <pattern>
+            ZDATA11
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I like the process of writing programming code.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data12 </set>
+	                <srai>ZDATA12</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data12 </set>
+	                <srai>ZDATA12</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data12 </set>
+	                <srai>ZDATA12</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "codingpref"> 1 </set>
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data12 </set>
+	                <srai>ZDATA12</srai>
+	            </li>
+	            <li value = "5"> 
+	                <set name = "codingpref"> 1 </set>
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data12 </set>
+	                <srai>ZDATA12</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA11</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data12">
+    <category>
+        <pattern>
+            ZDATA12
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I try to solve a problem by writing a software solution first.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data13 </set>
+	                <srai>ZDATA13</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data13 </set>
+	                <srai>ZDATA13</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data13 </set>
+	                <srai>ZDATA13</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data13 </set>
+	                <srai>ZDATA13</srai>
+	            </li>
+	            <li value = "5">
+	                <set name = "development"><srai> XADD <get name = "development" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data13 </set>
+	                <srai>ZDATA13</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA12</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data13">
+    <category>
+        <pattern>
+            ZDATA13
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I am able to easily locate flaws in software applications by reading their source code.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data14 </set>
+	                <srai>ZDATA14</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data14 </set>
+	                <srai>ZDATA14</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data14 </set>
+	                <srai>ZDATA14</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "errordetectskill"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data14 </set>
+	                <srai>ZDATA14</srai>
+	            </li>
+	            <li value = "5">
+	                <set name = "errordetectskill"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data14 </set>
+	                <srai>ZDATA14</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA13</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data14">
+    <category>
+        <pattern>
+            ZDATA14
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I like to manually secure a computer against potential unauthorized access.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data15 </set>
+	                <srai>ZDATA15</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data15 </set>
+	                <srai>ZDATA15</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data15 </set>
+	                <srai>ZDATA15</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "securitypref"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data15 </set>
+	                <srai>ZDATA15</srai>
+	            </li>
+	            <li value = "5">
+	                <set name = "securitypref"> 1 </set>
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> data15 </set>
+	                <srai>ZDATA15</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA14</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "data15">
+    <category>
+        <pattern>
+            ZDATA15
+        </pattern>
+        <template>
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            please indicate how much you agree or disagree with the following statement:<br/>
+            I have a strong sense of vigilance against potential security and privacy pitfalls which directly affect me.
+        </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        *
+	    </pattern>
+	    <template>
+	        <think>
+	            <set var = "rating"><star index = "1" /></set>
+	        </think>
+	        <condition var = "rating">
+	            <li value = "1">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> createreport </set>
+	                <srai>ZCREATEREPORT</srai>
+	            </li>
+	            <li value = "2"> 
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> createreport </set>
+	                <srai>ZCREATEREPORT</srai>
+	            </li>
+	            <li value = "3">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> createreport </set>
+	                <srai>ZCREATEREPORT</srai>
+	            </li>
+	            <li value = "4">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> createreport </set>
+	                <srai>ZCREATEREPORT</srai>
+	            </li>
+	            <li value = "5">
+	                <set name = "analysis"><srai> XADD <get name = "analysis" /> XS <get var = "rating" /> </srai></set>
+	                <set name = "topic"> createreport </set>
+	                <srai>ZCREATEREPORT</srai>
+	            </li>
+	            <li> Please enter a number between 1`and 5 inclusive.<br/> <srai>ZDATA15</srai></li>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<topic name = "createreport">
+	<category>
+	    <pattern>
+	        ZCREATEREPORT
+	    </pattern>
+	    <template>
+	       <think><set var = "commavar"> 0 </set></think>
+	       You are strong in the following areas:
+	       <condition name = "numericskill">
+	           <li value = "1"> 
+	                <think><set var = "commavar"> 1 </set></think>
+	                math, statistics, and logical reasoning
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "1"> , </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition name = "leadershipskill">
+	           <li value = "1"> 
+	                <think><set var = "commavar"> 1 </set></think>
+	                leadership
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "1"> , </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition name = "problemsolveskill">
+	           <li value = "1"> 
+	                <think><set var = "commavar"> 1 </set></think>
+	                solving people's problems
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "1"> , </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition name = "buildskill">
+	           <li value = "1"> 
+	                <think><set var = "commavar"> 1 </set></think>
+	                creating objects
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "1"> , </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition name = "errordetectskill">
+	           <li value = "1"> 
+	                eliminating errors
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "0"> none </li>
+	           <li></li>
+	       </condition>
+	       
+	       .
+	       
+	       You prefer 
+	       <condition name = "numericpref">
+	           <li value = "1"> 
+	                <think><set var = "commavar"> 1 </set></think>
+	                working with numbers
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "1"> , </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition name = "communicationpref">
+	           <li value = "1"> 
+	                <think><set var = "commavar"> 1 </set></think>
+	                interacting with people
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "1"> , </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition name = "workplacepref">
+	           <li value = "1"> 
+	                <think><set var = "commavar"> 1 </set></think>
+	                varying your workplace
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "1"> , </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition name = "codingpref">
+	           <li value = "1"> 
+	                <think><set var = "commavar"> 1 </set></think>
+	                writing lines of programming code
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "1"> , </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition name = "securitypref">
+	           <li value = "1"> 
+	                caring about software security
+	           </li>
+	           <li></li>
+	       </condition>
+	       
+	       <condition var = "commavar">
+	           <li value = "0"> none </li>
+	           <li></li>
+	       </condition>
+	       
+	       .
+	       
+	       Based on your response,
+	       
+	       <think><set var = "careerchoice"><srai>LMAX <get name = "management"/> LS <get name = "consulting"/> <get name = "development"/> <get name = "security"/> <get name = "analysis"/> </srai></set></think>
+	       <condition var = "careerchoice">
+	           <li value = "15"><srai>ZMAXREPORT <get var = "careerchoice"/></srai></li>
+	           <li value = "14"><srai>ZMAXREPORT <get var = "careerchoice"/></srai></li>
+	           <li value = "13"><srai>ZMAXREPORT <get var = "careerchoice"/></srai></li>
+	           <li value = "12"><srai>ZMAXREPORT <get var = "careerchoice"/></srai></li>
+	           <li value = "11"><srai>ZMAXREPORT <get var = "careerchoice"/></srai></li>
+	           <li value = "10"><srai>ZMAXREPORT <get var = "careerchoice"/></srai></li>
+	           <li>there is not enough information to determine your potential career path(s). </li>
+	       </condition>
+	    </template>
+	</category>
+	</topic>
+	
+	<category>
+	    <pattern>ZMAXREPORT <set>number</set></pattern>
+	    
+	    <template>
+	        <think><set var = "maxvalue"> <star/> </set></think>
+	        <think><set var = "commavalue"> 0 </set></think>
+	        
+	        you should consider the following career option(s):
+	        
+	        <condition var = "maxvalue">
+	            <li><value><get name = "management"/></value>
+	                <think><set var = "commavalue"> 1 </set></think>
+	                IT management
+	            </li>
+	            
+	            <li><value><get name = "consulting"/></value>
+	                <condition var = "commavalue">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
+	                
+	                <think><set var = "commavalue"> 1 </set></think>
+	                software consulting
+	            </li>
+	            
+	            <li><value><get name = "development"/></value>
+	                <condition var = "commavalue">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
+	                
+	                <think><set var = "commavalue"> 1 </set></think>
+	                software development
+	            </li>
+	            
+	            <li><value><get name = "security"/></value>
+	                <condition var = "commavalue">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
+	                
+	                <think><set var = "commavalue"> 1 </set></think>
+	                cybersecurity
+	            </li>
+	            
+	            <li><value><get name = "analysis"/></value>
+	                <condition var = "commavalue">
+	                    <li value = "1"> , </li>
+	                    <li></li>
+	                </condition>
+	                
+	                <think><set var = "commavalue"> 1 </set></think>
+	                data analysis
+	            </li>
+	        </condition>
+	        
+	        .
+	        
+	    </template>
+	</category>
 </aiml>
