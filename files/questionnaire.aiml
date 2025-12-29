@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-	<!-- insert your AIML categories here -->
 	
 	<!-- Helper Function to Determine Which of the Two Nonnegative Integers is Greater-->
     <category>
@@ -103,7 +102,7 @@
 	            <set name = "security"> 0 </set>
 	            <set name = "analysis"> 0 </set>
 	        </think>
-	        Great! I will ask you a series of questions to find your strengths, preferences, and the best career option. <br/>
+	        Great! I will ask you a series of questions to find your strengths, preferences, and the best career option(s). <br/>
 	        <srai> ZDATA1 </srai>
 	    </template>
 	</category>
