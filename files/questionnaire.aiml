@@ -1215,14 +1215,17 @@
 	        <think><set var = "maxvalue"> <star/> </set></think>
 	        <think><set var = "commavalue"> 0 </set></think>
 	        
-	        you should consider the following career option(s):
+	        <p>
+	        you should consider the following career option(s): &nbsp
 	        
 	        <condition var = "maxvalue">
 	            <li><value><get name = "management"/></value>
 	                <think><set var = "commavalue"> 1 </set></think>
 	                IT management
 	            </li>
-	            
+	        </condition>
+	        
+	        <condition var = "maxvalue">
 	            <li><value><get name = "consulting"/></value>
 	                <condition var = "commavalue">
 	                    <li value = "1"> , </li>
@@ -1232,7 +1235,9 @@
 	                <think><set var = "commavalue"> 1 </set></think>
 	                software consulting
 	            </li>
-	            
+	       </condition>
+	       
+	       <condition var = "maxvalue">
 	            <li><value><get name = "development"/></value>
 	                <condition var = "commavalue">
 	                    <li value = "1"> , </li>
@@ -1242,7 +1247,9 @@
 	                <think><set var = "commavalue"> 1 </set></think>
 	                software development
 	            </li>
-	            
+	       </condition>
+	       
+	       <condition var = "maxvalue">
 	            <li><value><get name = "security"/></value>
 	                <condition var = "commavalue">
 	                    <li value = "1"> , </li>
@@ -1252,7 +1259,9 @@
 	                <think><set var = "commavalue"> 1 </set></think>
 	                cybersecurity
 	            </li>
-	            
+	       </condition>
+	       
+	       <condition var = "maxvalue">     
 	            <li><value><get name = "analysis"/></value>
 	                <condition var = "commavalue">
 	                    <li value = "1"> , </li>
@@ -1262,10 +1271,11 @@
 	                <think><set var = "commavalue"> 1 </set></think>
 	                data analysis
 	            </li>
-	        </condition>
+	       </condition>
 	        
 	        .
 	        
+	        </p>
 	    </template>
 	</category>
 </aiml>
