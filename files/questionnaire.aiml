@@ -1093,6 +1093,8 @@
 	<!-- Creates a Report for the Student of His/Her Preferences and Strengths and Career Options 
 	     If the student does not answer positively with most of the questions, then it is likely that
 	     he or she may not have any preference, strength, or career option as determined by the questionnaire.
+	     Note that the local variable 'placeholder' is needed so that its associated plain text can be printed
+	     despite its value not being used.
 	-->
 	<topic name = "createreport">
 	<category>
@@ -1166,11 +1168,12 @@
 	           <li value = "0"> none </li>
 	           <li></li>
 	       </condition>
-	       
 	       .
 	       
+	       <think><set var = "commavar"> 0 </set></think>
+	       
 	       <condition var = "placeholder">
-	            <li>You prefer: </li>
+	            <li> Your preference(s) are as follows: </li>
 	        </condition>
 	        
 	       <condition name = "numericpref">
@@ -1223,6 +1226,7 @@
 	                    <li value = "1">, </li>
 	                    <li></li>
 	                </condition>
+	                <think><set var = "commavar"> 1 </set></think>
 	                caring about software security
 	           </li>
 	           <li></li>
@@ -1232,11 +1236,10 @@
 	           <li value = "0"> none </li>
 	           <li></li>
 	       </condition>
-	       
 	       .
 	       
 	        <condition var = "placeholder">
-	            <li>Based on your response, </li>
+	            <li> Based on your response, </li>
 	        </condition>
 	       
 	       <think><set var = "careerchoice"><srai>LMAX <get name = "management"/> LS <get name = "consulting"/> <get name = "development"/> <get name = "security"/> <get name = "analysis"/> </srai></set></think>
@@ -1253,7 +1256,7 @@
 	</category>
 	</topic>
 	
-	<!-- Generates the Career Options of the Student -->
+	<!-- Generates the Career Option(s) of the Student -->
 	<category>
 	    <pattern>ZMAXREPORT <set>number</set></pattern>
 	    
