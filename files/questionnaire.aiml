@@ -114,7 +114,7 @@
 	        ZDATA1
 	    </pattern>
 	    <template>
-	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
 	        please indicate how much you agree or disagree with the following statement:<br/>
 	        I love to apply numbers, metrics, mathematical or statistical concepts to my current tasks.
 	    </template>
@@ -181,7 +181,7 @@
 	        ZDATA2
 	    </pattern>
 	    <template>
-	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
 	        please indicate how much you agree or disagree with the following statement:<br/>
 	        I prefer to quantify the world in terms of objective measurements and conclusions rather than relying on intuition and experience.
 	    </template>
@@ -247,7 +247,7 @@
 	        ZDATA3
 	    </pattern>
 	    <template>
-	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
 	        please indicate how much you agree or disagree with the following statement:<br/>
 	        I am proficient in numerical analysis and/or math.
 	    </template>
@@ -313,7 +313,7 @@
 	        ZDATA4
 	    </pattern>
 	    <template>
-	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
 	        please indicate how much you agree or disagree with the following statement:<br/>
 	        I prefer to tackle problems by mediating between different people.
 	    </template>
@@ -379,7 +379,7 @@
 	        ZDATA5
 	    </pattern>
 	    <template>
-	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+	        On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
 	        please indicate how much you agree or disagree with the following statement:<br/>
 	        I find it fulfilling and purposeful to participate in meetings which may last for hours.
 	    </template>
@@ -443,7 +443,7 @@
             ZDATA6
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I excel at leading a group of people.
         </template>
@@ -509,7 +509,7 @@
             ZDATA7
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I prefer a work environment which is constantly changing.
         </template>
@@ -575,7 +575,7 @@
             ZDATA8
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I prefer being able to set my own work schedule even if it means having to advertise my own skills and services.
         </template>
@@ -639,7 +639,7 @@
             ZDATA9
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I have an uncanny ability to resolve issues that other people encounter.
         </template>
@@ -705,7 +705,7 @@
             ZDATA10
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I am able to easily build physical products or create software user applications.
         </template>
@@ -771,7 +771,7 @@
             ZDATA11
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I like the process of writing programming code.
         </template>
@@ -837,7 +837,7 @@
             ZDATA12
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I try to solve a problem by writing a software solution first.
         </template>
@@ -901,7 +901,7 @@
             ZDATA13
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I am able to easily locate flaws in software applications by reading their source code.
         </template>
@@ -967,7 +967,7 @@
             ZDATA14
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I like to manually secure a computer against potential unauthorized access.
         </template>
@@ -1033,7 +1033,7 @@
             ZDATA15
         </pattern>
         <template>
-            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strong agree', 
+            On a scale of 1 to 5, with 1 representing 'strongly disagree', 3 representing 'neither agree or disagree', and 5 representing 'strongly agree', 
             please indicate how much you agree or disagree with the following statement:<br/>
             I have a strong sense of vigilance against potential security and privacy pitfalls which directly affect me.
         </template>
