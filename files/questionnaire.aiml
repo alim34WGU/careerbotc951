@@ -1106,7 +1106,7 @@
 	       <think><set var = "placeholder"> 0 </set></think>
 	       
 	       <condition var = "placeholder">
-	            <li>You are strong in the following areas: </li>
+	            <li>You are strong in the following area(s): </li>
 	        </condition>
 	       
 	       <condition name = "numericskill">
