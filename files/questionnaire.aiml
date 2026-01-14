@@ -1158,7 +1158,8 @@
 	               <condition var = "commavar">
 	                    <li value = "1">, </li>
 	                    <li></li>
-	               </condition> 
+	               </condition>
+	               <think><set var = "commavar"> 1 </set></think>
 	               eliminating errors
 	           </li>
 	           <li></li>
